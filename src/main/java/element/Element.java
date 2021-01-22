@@ -12,4 +12,9 @@ public class Element<T>{
 		this.v = v;
 		this.i = i;
 	}
+
+	@Override
+	public String toString() {
+		return v.toString();
+	}
 }
