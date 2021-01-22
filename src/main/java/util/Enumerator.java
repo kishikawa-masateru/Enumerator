@@ -13,19 +13,17 @@ import element.Element;
 public class Enumerator<T> implements Iterable<Element<T>>{
 
 	// enumerate 対象のコレクション
-	private Collection<T> collection;
 	private int index;
 	private T[] array;
 
 	@SuppressWarnings("unchecked")
 	public Enumerator(Collection<T> t) {
 		this.array = (T[]) t.toArray();
-		this.collection = t;
 		this.index = 0;
 	}
 
 	/**
-	 * 
+	 *
 	 * @param <T> コレクションの要素の型
 	 * @param t
 	 * @return
@@ -39,7 +37,7 @@ public class Enumerator<T> implements Iterable<Element<T>>{
 		return new Iterator<Element<T>>(){
 			@Override
 			public boolean hasNext() {
-				return collection.size() > index;
+				return array.length > index;
 			}
 
 			@Override
@@ -49,7 +47,7 @@ public class Enumerator<T> implements Iterable<Element<T>>{
 
 			@Override
 			public void remove() {
-				
+
 			}
 		};
 	}
