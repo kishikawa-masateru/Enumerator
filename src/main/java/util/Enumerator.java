@@ -1,41 +1,56 @@
 package util;
 
-import java.util.Collections;
+import java.util.Collection;
 import java.util.Iterator;
 
 import element.Element;
 
 /**
- *
+ *	Pythonの enumerate をJavaで実装したクラス
  * @author masa
  *
  */
-public class Enumerator<T extends Collections> implements Iterable<Element<T>>{
+public class Enumerator<T> implements Iterable<Element<T>>{
 
-	private Collections collection;
+	// enumerate 対象のコレクション
+	private Collection<T> collection;
+	private int index;
+	private T[] array;
+
+	@SuppressWarnings("unchecked")
+	public Enumerator(Collection<T> t) {
+		this.array = (T[]) t.toArray();
+		this.collection = t;
+		this.index = 0;
+	}
+
+	/**
+	 * 
+	 * @param <T> コレクションの要素の型
+	 * @param t
+	 * @return
+	 */
+	public  static <T> Enumerator<T> enumerate(Collection<T> t){
+		return new Enumerator<>(t);
+	}
 
 	@Override
 	public Iterator<Element<T>> iterator() {
 		return new Iterator<Element<T>>(){
-
 			@Override
 			public boolean hasNext() {
-				return false;
+				return collection.size() > index;
 			}
 
 			@Override
 			public Element<T> next() {
-				// TODO 自動生成されたメソッド・スタブ
-				return null;
+				return new Element<>(array[index], index++);
 			}
 
 			@Override
 			public void remove() {
-				// TODO 自動生成されたメソッド・スタブ
-
+				
 			}
-
 		};
 	}
-
 }
