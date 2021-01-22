@@ -1,0 +1,2 @@
+# Enumerator
+Javaでforループ処理を簡潔にするライブラリです
