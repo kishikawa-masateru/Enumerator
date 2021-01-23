@@ -1,2 +1,2 @@
 # Enumerator
-Javaでforループ処理を簡潔にするライブラリです
+Pythonのenumerator関数のJavaバージョンです．
