@@ -8,6 +8,11 @@
 	<groupId>com.github.kishikawa-masateru</groupId>
 	<artifactId>enumerator</artifactId>
 	<version>0.9</version>
+	<packaging>jar</packaging>
+
+	<description>
+		Java version of Python's enumerate function.
+	</description>
 
 	<name>enumerator</name>
 	<!-- FIXME change it to the project's website -->
@@ -24,6 +29,8 @@
 		<developer>
 			<name>kishikawa masateru</name>
 			<email>kishimasa0614@gmail.com</email>
+			<organization>induvidual</organization>
+			<organizationUrl>https://github.com/kishikawa-masateru/Enumerator</organizationUrl>
 		</developer>
 	</developers>
 
