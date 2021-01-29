@@ -13,6 +13,8 @@
 			</activation>
 		</profile>
 	</profiles>
+
+
 	<groupId>com.github.kishikawa-masateru</groupId>
 	<artifactId>enumerator</artifactId>
 	<version>0.9</version>
