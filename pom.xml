@@ -4,15 +4,6 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<profiles>
-		<profile>
-			<activation>
-				<property>
-					<name>gpg.passphrase</name>
-				</property>
-			</activation>
-		</profile>
-	</profiles>
 
 
 	<groupId>com.github.kishikawa-masateru</groupId>
@@ -39,7 +30,7 @@
 		<developer>
 			<name>kishikawa masateru</name>
 			<email>kishimasa0614@gmail.com</email>
-			<organization>induvidual</organization>
+			<organization>individual</organization>
 			<organizationUrl>https://github.com/kishikawa-masateru/Enumerator</organizationUrl>
 		</developer>
 	</developers>
